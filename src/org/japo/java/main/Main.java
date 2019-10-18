@@ -46,8 +46,8 @@ public final class Main {
             System.out.printf("Inserte Segundo .............:");
             Segundo = SCN.nextInt();
             //Devolver resultado
-            System.out.printf("Hora inicio ......: %02d:%02d:%02d%n", Hora, Minuto, Segundo);
-            System.out.printf("Hora Actual ......: %tT%n ", tiempo);
+            System.out.printf("Hora inicio .......: %02d:%02d:%02d%n", Hora, Minuto, Segundo);
+            System.out.printf("Hora Actual .......: %tT%n ", tiempo);
 
             
             //Operaciones

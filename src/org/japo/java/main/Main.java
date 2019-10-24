@@ -1,5 +1,5 @@
 /* 
- * 
+ * Copyright 2019 Mario Merlos Abella <mario.merlos.alum@iescamp.es>.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,41 +31,41 @@ public final class Main {
 
     public static void main(String[] args) {
         // Generar dato
-        int Hora, Minuto, Segundo;
+        int hora, minuto, Segundo;
         Calendar tiempo = Calendar.getInstance();
         
-        int SecondI, SecondA;
-        int  HoraCal, MinutoCal, SegundoCal;
+        int secondI, secondA;
+        int  horaCal, minutoCal, segundoCal;
 
         try {
             //Insertar datos
             System.out.printf("Inserte Hora .............:");
-            Hora = SCN.nextInt();
+            hora = SCN.nextInt();
             System.out.printf("Inserte Minuto .............:");
-            Minuto = SCN.nextInt();
+            minuto = SCN.nextInt();
             System.out.printf("Inserte Segundo .............:");
             Segundo = SCN.nextInt();
             //Devolver resultado
-            System.out.printf("Hora inicio .......: %02d:%02d:%02d%n", Hora, Minuto, Segundo);
+            System.out.printf("Hora inicio .......: %02d:%02d:%02d%n", hora, minuto, segundo);
             System.out.printf("Hora Actual .......: %tT%n ", tiempo);
 
             
             //Operaciones
-            SecondI = Hora * 3600 + Minuto * 60 + Segundo;
+            SecondI = Hora * 3600 + minuto * 60 + segundo;
             SecondA = tiempo.get(Calendar.HOUR_OF_DAY) * 3600 + tiempo.get(Calendar.MINUTE) * 60 + tiempo.get(Calendar.SECOND);
             //segundos
             /*System.out.println(SecondA);
              System.out.println(SecondI);*/
-            SegundoCal = SecondA - SecondI;
+            segundoCal = secondA - secondI;
             
             //Minutos
-            MinutoCal = SegundoCal / 60;
+            minutoCal = SegundoCal / 60;
             SegundoCal = SegundoCal % 60;
 
             //Horas
-            HoraCal = MinutoCal / 60;
-            MinutoCal = MinutoCal % 60;
-             System.out.printf("Tiempo de clase ..: %02d:%02d:%02d%n", HoraCal, MinutoCal, SegundoCal);
+            HoraCal = minutoCal / 60;
+            minutoCal = minutoCal % 60;
+             System.out.printf("Tiempo de clase ..: %02d:%02d:%02d%n", horaCal, minutoCal, segundoCal);
                    
         } catch (Exception e) {
             //Mensaje

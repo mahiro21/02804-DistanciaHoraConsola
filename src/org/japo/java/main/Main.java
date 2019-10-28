@@ -31,11 +31,11 @@ public final class Main {
 
     public static void main(String[] args) {
         // Generar dato
-        int hora, minuto, Segundo;
+        int hora, minuto, segundo;
         Calendar tiempo = Calendar.getInstance();
-        
+
         int secondI, secondA;
-        int  horaCal, minutoCal, segundoCal;
+        int horaCal, minutoCal, segundoCal;
 
         try {
             //Insertar datos
@@ -44,36 +44,30 @@ public final class Main {
             System.out.printf("Inserte Minuto .............:");
             minuto = SCN.nextInt();
             System.out.printf("Inserte Segundo .............:");
-            Segundo = SCN.nextInt();
+            segundo = SCN.nextInt();
             //Devolver resultado
             System.out.printf("Hora inicio .......: %02d:%02d:%02d%n", hora, minuto, segundo);
             System.out.printf("Hora Actual .......: %tT%n ", tiempo);
 
-            
             //Operaciones
-            SecondI = Hora * 3600 + minuto * 60 + segundo;
-            SecondA = tiempo.get(Calendar.HOUR_OF_DAY) * 3600 + tiempo.get(Calendar.MINUTE) * 60 + tiempo.get(Calendar.SECOND);
+            secondI = hora * 3600 + minuto * 60 + segundo;
+            secondA = tiempo.get(Calendar.HOUR_OF_DAY) * 3600 + tiempo.get(Calendar.MINUTE) * 60 + tiempo.get(Calendar.SECOND);
             //segundos
-            /*System.out.println(SecondA);
-             System.out.println(SecondI);*/
             segundoCal = secondA - secondI;
-            
+
             //Minutos
-            minutoCal = SegundoCal / 60;
-            SegundoCal = SegundoCal % 60;
+            minutoCal = segundoCal / 60;
+            segundoCal = segundoCal % 60;
 
             //Horas
-            HoraCal = minutoCal / 60;
+            horaCal = minutoCal / 60;
             minutoCal = minutoCal % 60;
-             System.out.printf("Tiempo de clase ..: %02d:%02d:%02d%n", horaCal, minutoCal, segundoCal);
-                   
+            System.out.printf("Tiempo de clase ..: %02d:%02d:%02d%n", horaCal, minutoCal, segundoCal);
+
         } catch (Exception e) {
             //Mensaje
             System.out.printf("ERROR: Entrada incorrecta");
-        } /*finally {
-            //Borrar buffer
-            SCN.nextLine();
-        }*/
+        }
 
     }
 }
